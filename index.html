@@ -525,28 +525,23 @@
 
   <div class="menu-buttons">
     <div class="menu-button" ontouchend="change_page('homework')">
-      <img src="icon1.png"
-        class="menu-icon">
+      <img src="icon1.png" class="menu-icon">
       <div class="menu-text">宿題追加</div>
     </div>
     <div class="menu-button" ontouchend="change_page('todo-container')">
-      <img src="icon2.png"
-        class="menu-icon">
+      <img src="icon2.png" class="menu-icon">
       <div class="menu-text">ToDo</div>
     </div>
     <div class="menu-button" ontouchend="change_page('calendar-div')">
-      <img src="icon3.png"
-        class="menu-icon">
+      <img src="icon3.png" class="menu-icon">
       <div class="menu-text">calendar</div>
     </div>
     <div class="menu-button" ontouchend="change_page('timetable-container')">
-      <img src="icon4.png"
-        class="menu-icon">
+      <img src="icon4.png" class="menu-icon">
       <div class="menu-text">時間割</div>
     </div>
     <div class="menu-button" ontouchend="change_page('afterschool-container')">
-      <img src="icon5.png"
-        class="menu-icon">
+      <img src="icon5.png" class="menu-icon">
       <div class="menu-text">帰宅時間</div>
     </div>
   </div>
@@ -1675,10 +1670,10 @@
                         durationEditable: true,
                         display: 'block'
                       });
-                      for (var i = 0; i < holiday.length; i++) {
-                        calendar.addEvent(holiday[i]);
-                      }
                     }
+                  }
+                  for (var i = 0; i < holiday.length; i++) {
+                    calendar.addEvent(holiday[i]);
                   }
                 }
               }
