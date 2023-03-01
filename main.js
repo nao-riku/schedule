@@ -701,7 +701,7 @@ function make_todo(data, data2) {
         tr.appendChild(td);
 
         td = document.createElement('td');
-        if (data[i][2] == 1) td.innerText = data[i][3] + "/" + data[i][1];
+        if (data[i][2] == "") td.innerText = data[i][3] + "/" + data[i][1];
         else td.innerText = data[i][3] + "/" + data[i][2];
         if (data[i][3] !== "0") td.style = "color: red";
         tr.appendChild(td);
@@ -751,9 +751,9 @@ function make_todo(data, data2) {
             data.forEach(e => {
                 if (e[8] === Number(this.dataset.i)) data_i = e;
             });
-            let time = (data_i[2] == 1) ? 5 : 1;
+            let time = (data_i[2] == "") ? 5 : 1;
             let time2 = Number(this.children[3].innerText.split("/")[0]);
-            let end = (data_i[2] == 1) ? 1 : 2;
+            let end = (data_i[2] == "") ? 1 : 2;
             if (time2 + time >= data_i[end]) {
                 this.style = "translate: 0px";
                 setTimeout(() => done(this), 1);
@@ -775,7 +775,7 @@ function make_todo(data, data2) {
         data.forEach(e => {
             if (e[8] === Number(tr.dataset.i)) data_i = e;
         });
-        let end = (data_i[2] == 1) ? 1 : 2;
+        let end = (data_i[2] == "") ? 1 : 2;
         adddata("ToDo!D" + (Number(tr.dataset.i) + 2), data_i[end]);
 
         setTimeout(() => {
@@ -817,7 +817,7 @@ function make_todo(data, data2) {
         let new_element = this.cloneNode(true);
         new_element.classList.remove("already");
         new_element.children[0].innerText = "●";
-        let end = (data_i[2] == 1) ? 1 : 2;
+        let end = (data_i[2] == "") ? 1 : 2;
         new_element.children[3].innerText = "0/" + data_i[end];
         new_element.addEventListener("touchstart", start_todo);
         new_element.addEventListener("touchmove", move_todo);
