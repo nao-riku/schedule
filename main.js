@@ -185,7 +185,7 @@ let calendar;
 
 window.onload = function () {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register("/service-worker.js")
+        navigator.serviceWorker.register("/schedule/service-worker.js")
             .then(function (registration) {
                 console.log("serviceWorker registed.");
             }).catch(function (error) {
