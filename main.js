@@ -184,6 +184,10 @@ function today() {
 let calendar;
 
 window.onload = function () {
+    window.addEventListener('error', function(e) {
+        document.getElementById("other_content").value = e.message;
+    })
+    
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register("/schedule/service-worker.js")
             .then(function (registration) {
