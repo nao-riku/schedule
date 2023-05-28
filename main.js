@@ -1059,7 +1059,7 @@ function edit_todo() {
                                 let offset = new Date(today().toDateString());
                                 offset.setDate(offset.getDate() + i);
                                 let start = new Date(offset.toLocaleDateString() + " 09:00");
-                                if (time_str === "") time_str = "18:00";
+                                if (time_str === "") time_str = "16:20";
                                 let end = new Date(offset.toLocaleDateString() + " " + time_str);
                                 if (start.toTimeString() !== end.toTimeString()) {
                                     calendar.addEvent({
