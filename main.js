@@ -508,7 +508,10 @@ function check_subject(s) {
             break;
         }
     }
-    if (subject >= 0) change_date(subject);
+    if (subject >= 0) {
+        document.getElementsByName("subject")[subject].checked = true;
+        change_date(subject);
+    }
 }
 
 
