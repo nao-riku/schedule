@@ -514,7 +514,12 @@ function check_subject(s) {
     }
     if (subject >= 0) {
         document.getElementsByName("subject")[subject].checked = true;
-        change_date(subject);
+        let timerId = setInterval(() => {
+            if (nextclass !== undefined) {
+                clearInterval(timerId);
+                change_date(subject);
+            }
+        }, 10);
     }
 }
 
