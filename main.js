@@ -772,6 +772,7 @@ function make_todo(data, data2) {
                 time3 = time2 + time;
                 adddata("ToDo!D" + (Number(this.dataset.i) + 2), time3);
                 this.children[3].innerText = time3 + "/" + data_i[end];
+                if (end == 1) this.children[3].innerText += "m";
             }
         }
         else if (move > -50) this.style = "translate: 0px; transition: 0.3s;";
@@ -795,6 +796,7 @@ function make_todo(data, data2) {
             new_element.children[0].innerText = "";
             new_element.children[3].style = ""
             new_element.children[3].innerText = data_i[end] + "/" + data_i[end];
+            if (end == 1) new_element.children[3].innerText += "m";
             new_element.addEventListener("touchstart", start_todo);
             new_element.addEventListener("touchend", end_todo2);
 
@@ -829,6 +831,7 @@ function make_todo(data, data2) {
         new_element.children[0].innerText = "●";
         let end = (data_i[2] == "") ? 1 : 2;
         new_element.children[3].innerText = "0/" + data_i[end];
+        if (end == 1) new_element.children[3].innerText += "m";
         new_element.addEventListener("touchstart", start_todo);
         new_element.addEventListener("touchmove", move_todo);
         new_element.addEventListener("touchend", end_todo);
