@@ -718,8 +718,8 @@ function make_todo(data, data2) {
         if (data[i][3] !== "0") td.style = "color: red";
         tr.appendChild(td);
 
-        let amount = data[i][2] == "" ? 1 : data[i][2];
-        if (data[i][1] * amount == data[i][3]) done(tr);
+        let end = (data_i[2] == "") ? 1 : 2;
+        if (data[i][end] == data[i][3]) done(tr);
 
         tbody.appendChild(tr);
     }
