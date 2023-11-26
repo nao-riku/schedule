@@ -583,7 +583,7 @@ function make_afterschool(data) {
             let offset = new Date(today().toDateString());
             offset.setDate(offset.getDate() + i);
             let start = new Date(offset.toLocaleDateString() + " 09:00");
-            if (time.value === "") time.value = "16:20";
+            if (time.value === "") time.value = "13:30";
             let end = new Date(offset.toLocaleDateString() + " " + time.value);
             if (start.toTimeString() !== end.toTimeString()) {
                 calendar.addEvent({
@@ -1060,7 +1060,7 @@ function edit_todo() {
                                 let offset = new Date(today().toDateString());
                                 offset.setDate(offset.getDate() + i);
                                 let start = new Date(offset.toLocaleDateString() + " 09:00");
-                                if (time_str === "") time_str = "16:20";
+                                if (time_str === "") time_str = "13:30";
                                 let end = new Date(offset.toLocaleDateString() + " " + time_str);
                                 if (start.toTimeString() !== end.toTimeString()) {
                                     calendar.addEvent({
